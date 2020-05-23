@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(248, 196, 218);
+    color: black;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+    line-height: 1.6em;
+    margin: auto;
+    max-width: 50em;
+}
+
+.full-width {
+    width: 20%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+
+p {
+    max-width: 42em;
+}
+
+.navbar {
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+}
+
+ul {
+    flex: 1;
+    text-align: center;
+}
+
+ul li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 25px;
+}
+
+ul li a {
+    text-decoration: none;
+    color: rgb(97, 92, 92);
+}
+
+#main-footer {
+    color: rgb(97, 92, 92);
+}
