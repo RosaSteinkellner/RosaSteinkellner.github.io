@@ -4,29 +4,76 @@
 <head>
 
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>The Algorithms</title>
     <link rel="stylesheet" type="text/css" href="mystyle.css">
 </head>
 
 <body>
     <video controls autoplay>
-        <source src="images/video.mp4" type="video/mp4">        
+        <source src="media/video.mp4" type="video/mp4">
         Your browser does not support the video tag.
-      </video>
+    </video>
     <div>
         <div id="Insertion">
             <h1>INSERTION SORT</h1>
-            <p>Schritt 1: Wenn es sich um das erste Element handelt, ist es bereits sortiert. <br> Schritt 2: Wähle das nächste Element <br> Schritt3: Vergleiche das Element mit jedem Element in dem bereits sortierten Teil
-                <br> Schritt 4: Füge das Element dort ein, wo es hinpasst.</p>
+            <p>Step 1: Select the first unsorted element. The first element is in itself already sorted, so start at the second. <br> Step 2: Compare the selected element to every element in the already sorted section of the array.
+                <br> Step 3: Insert the element in its place<br> Repeat this until the unsorted section is empty. </p>
         </div>
         <div id="Selection">
             <h1>SELECTION SORT</h1>
-            <p>1. Wähle das kleinste Element aus dem unsortierten Datensatz aus <br> 2. Füge es am Start ein. <br> 3. Suche nun das kleinste Element im Rest des Datensatzes und füge es nach dem letzten Element im sortierten Teil ein <br> 4. usw. <br></p>
+            <p>Step 1: Select the smallest element in the unsorted section of the array (at the start that is of course the entire array)<br> Step 2: Insert it at the beginning <br> Step 3: Now select the next smallest element in the remaining array and
+                bring it to the front after the previous one <br> Repeat as often as necessary</p>
         </div>
         <div id="Merge">
             <h1>MERGE SORT</h1>
-            <p>1. Teile den Datensatz in 2 Hälften <br> 2. Sortiere die Teilfelder rekursiv genau so <br> 3. Füge die sorteirten Teilfelder zusammen <br></p>
+            <p> This algorithm follows the motto "Divide and Conquer" <br> Step 1: Divide the array in half and continue doing that until you are left with parts consisting of two elements max.<br> Step 2: Compare and sort these small parts within themselves<br>                Step 3: Compare and merge the parts to the complete sorted array</p>
         </div>
+        <h3>Here is an overview of how they compare to each other:</h3>
+        <table style="width:100%">
+            <tr>
+                <th></th>
+                <th>Insertion</th>
+                <th>Selection</th>
+                <th>Merge</th>
+            </tr>
+            <tr>
+                <td>in-place</td>
+                <td><span class="green">✔</span></td>
+                <td><span class="green">✔</span></td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>stable</td>
+                <td><span class="green">✔</span></td>
+                <td>❌</td>
+                <td><span class="green">✔</span></td>
+            </tr>
+            <tr>
+                <td>adaptive</td>
+                <td><span class="green">✔</span></td>
+                <td>❌</td>
+                <td>❌</td>
+            </tr>
+            <tr>
+                <td>Best Case</td>
+                <td>O(n)</td>
+                <td>O(n²)</td>
+                <td>O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Average Case</td>
+                <td>O(n²)</td>
+                <td>O(n²)</td>
+                <td>O(n log n)</td>
+            </tr>
+            <tr>
+                <td>Worst Case</td>
+                <td>O(n²)</td>
+                <td>O(n²)</td>
+                <td>O(n log n)</td>
+            </tr>
+        </table>
     </div>
     <footer id="main-footer">
         <p><small>Copyright 2020; Sorting Things Out</small></p>
